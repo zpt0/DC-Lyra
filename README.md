@@ -25,7 +25,8 @@
 
 <br>
 
-> **⚠️ Notice:** This project is currently in **low-maintenance mode**. I'm not actively developing new features, but I **will** review and respond to pull requests, issues, and questions. If you're interested in taking over maintenance or reviving this project, please open an issue so we can discuss it.
+> [!WARNING]
+> **This project is discontinued.** Lyra is no longer maintained and this repository has been archived. I've moved on and won't be continuing development here — no new features, fixes, or support. The code stays available under the AGPL-3.0 license, so feel free to fork it and keep it alive yourself.
 
 <br>
 
