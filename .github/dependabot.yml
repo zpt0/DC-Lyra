@@ -5,7 +5,31 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 10
+    # One pull request for all npm updates. Version and security updates need
+    # separate groups because a group can only target one update type.
+    open-pull-requests-limit: 1
     labels:
       - "dependencies"
     versioning-strategy: increase
+    groups:
+      all-dependencies:
+        applies-to: version-updates
+        patterns:
+          - "*"
+      all-security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 1
+    labels:
+      - "dependencies"
+    groups:
+      all-actions:
+        patterns:
+          - "*"
